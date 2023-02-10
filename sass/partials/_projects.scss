@@ -1,0 +1,72 @@
+.projects-front-page, .index{
+    margin: 1.5rem 0;
+    display: grid;
+    grid-gap: .5rem;
+
+    h1 {
+        margin-top: 2rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+        @include borderTreatment();
+        font-size: 2rem;
+    }
+
+    article {
+        margin: 1rem 3%;
+
+        h2 {
+            font-size: 1.35rem;
+        }
+    }
+
+    .entry-info {
+        margin-top: .5rem;
+        display: grid;
+        .entry-thumbnail {
+            margin: auto;
+        }
+
+        .entry-excerpt {
+            background-color: $color-accent;
+            padding: 1rem 4%;
+            color: $font-color-light;
+            height: 200px;
+            display: flex;
+            flex-flow: column nowrap;
+            justify-content: center;
+
+            .read-more {
+                padding-top: 1rem;
+                text-align: right;
+
+                a{
+                    color: $font-color-light;
+                    text-decoration: none;
+                    transition: all .5s;
+
+                    &:hover {
+                        font-size: 1.15rem;
+                    }
+                }
+            }
+        }
+    }
+
+}
+
+
+@media screen and (min-width: 800px) {
+    .projects-front-page, .index {
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+
+        h1 {
+            grid-column: 1/-1;
+        }
+            img {
+                height: 250px;
+                object-fit: cover;
+            }
+    }
+
+}

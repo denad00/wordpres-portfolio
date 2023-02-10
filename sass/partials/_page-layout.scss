@@ -1,0 +1,118 @@
+.site-main {
+
+    h2 {
+        text-transform: uppercase;
+        text-align: center;
+        font-size: 2rem;
+    }
+
+    h3 {
+        font-size:2rem;
+        padding: 1rem 2%;
+        margin: 2rem 0;
+        border-top: 3px solid $font-color-dark;
+        border-bottom: 3px solid $font-color-dark;
+    }
+
+    #About {
+        margin: 1rem 4%;
+
+    .page-content{
+        p {
+            padding: 1rem 0;
+            text-align: center;
+        }
+
+        cite {
+            border-bottom: 1px solid $font-color-dark;
+        }
+    }
+    }
+
+    #Resume {
+        margin: 1rem 4%;
+
+        h3{
+            font-size: 1.5rem;
+        }
+
+        h4 {
+            font-weight: 700;
+            font-size: 1.25rem;
+        }
+        p {
+            font-size: .8rem;
+        }
+
+        li {
+            font-size: .9rem;
+        }
+
+        .wp-block-group__inner-container {
+            margin: 1rem 0;
+        }
+    }
+
+    #Contact {
+        .page-content{
+            margin: 1rem 4%;
+        }
+
+    }
+}
+
+@media screen and (min-width: 800px) {
+
+    #About {
+        .page-content {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            margin: 2rem 0;
+        
+            .wp-container-1 {
+                background-color: $color-main-dark;
+                padding: 1rem 5%;
+
+                .wp-block-group__inner-container {
+                    display: flex;
+                    flex-flow: column nowrap;
+                    justify-content: center;
+                    height: 100%;
+                }
+
+                p {
+                    color: $color-main-light;
+                }
+            }
+
+            figure{
+                grid-column: 1/-1;
+            }
+        }
+
+    }
+
+    #Resume {
+        background-color: $color-main-dark;
+        margin: 0 !important;
+        padding: 4rem 4%;
+
+        .page-output {
+            background-color: #f3f3f4d0;
+            padding: 2rem 3%;
+        }
+    }
+
+    #Contact {
+        display: flex;
+        flex-flow: column nowrap;
+        text-align: center;
+        width: 50%;
+        margin: auto;
+        .ninja-forms-form-wrap{
+            background-color: $color-accent;
+            padding: 1.5rem 5%;
+            color: $font-color-light;
+        }
+    }
+}

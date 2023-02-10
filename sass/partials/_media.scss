@@ -1,0 +1,11 @@
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+.skills-front-page {
+    img {
+        @include roundImg();
+        @include squareImg(300px, 300px);
+    }
+}

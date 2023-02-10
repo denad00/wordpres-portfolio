@@ -1,0 +1,20 @@
+
+@mixin roundImg($border: 50%) {
+    border-radius: $border
+}
+
+@mixin squareImg($h: 100px, $w: 100px){
+    height: $h;
+    width: $w;
+}
+
+
+@mixin borderTreatment ($lh:.1em, $c:$color-main-light, $bordercolor: $color-accent ){
+        line-height: $lh;
+        border-bottom: 1px solid $bordercolor;
+
+    span {
+        background-color: $c;
+        padding: .25rem 2%;
+    }
+}

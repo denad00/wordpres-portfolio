@@ -1,0 +1,137 @@
+.site-branding {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+
+    h1 {
+        font-size: 2.5rem;
+        a {
+            text-decoration: none;
+            color: $font-color-dark;
+        }
+    }
+
+}
+
+#menu-main-menu, #menu-socials, #menu-main-menu-1, #menu-socials-1 {
+    padding-inline-start: 0;
+    li{
+        list-style-type: none;
+    }
+}
+
+#menu-main-menu, #menu-main-menu-1{
+    display: flex;
+    flex-flow: row nowrap;
+    justify-content: center;
+    gap: 1rem;
+
+    li a {
+        color: $font-color-dark;
+        text-decoration: none;
+        transition: all .5s;
+
+        &:hover {
+            font-style: italic;
+            color: $color-accent;
+            font-weight: bold;
+            font-size: 1.1rem;
+
+        }
+    }
+}
+
+
+#menu-socials, #menu-socials-1 {
+    display: flex;
+    flex-flow: row nowrap;
+    gap: 1rem;
+    justify-content: center;
+
+    li a {
+        text-decoration: none;
+    }
+        
+
+        li:nth-of-type(1){
+            a::before {
+                font-family: "Font Awesome 5 Brands";
+                content: '\f08c';
+                font-size: 1.25rem;
+                color: $font-color-dark;
+            }
+        }
+
+        li:nth-of-type(2){
+            a::before {
+                font-family: "Font Awesome 5 Brands";
+                content: '\f09b';
+                font-size: 1.25rem;
+                color: $font-color-dark;
+            }   
+        }
+
+        li:nth-of-type(3){
+            a::before {
+                font-family: "Font Awesome 5 Brands";
+                content: '\f16d';
+                font-size: 1.25rem;
+                color: $font-color-dark;
+            }
+        }
+
+    span {
+        clip: rect(0 0 0 0);
+        clip-path: inset(50%);
+        height: 1px;
+        overflow: hidden;
+        position: absolute;
+        white-space: nowrap;
+        width: 1px;
+    }
+
+    li {
+        transition: all .5s;
+    }
+    
+    a {
+        &:hover {
+            font-style: italic;
+            font-weight: bold;
+            font-size: 1.1rem;
+        }
+    }
+}
+
+#menu-main-menu-1 li a, #menu-socials-1 li a{
+    color: $font-color-light;
+}
+
+#menu-socials-1 li a:nth-of-type(1)::before, #menu-socials-1 li a:nth-of-type(2)::before,#menu-socials-1 li a:nth-of-type(3)::before {
+    color: $font-color-light;
+}
+
+@media screen and (min-width: 800px) {
+    .site-branding {
+        flex-flow: row nowrap;
+        justify-content: flex-start;
+        width: 30%
+        // justify-content: space-between;
+    }
+    
+    .site-navigation {
+        order: 3;
+        width: 30%;
+    
+        #menu-main-menu {
+            justify-content: flex-end;
+        }
+    
+        #menu-socials {
+            justify-content: flex-end;
+        }
+    }
+    
+}

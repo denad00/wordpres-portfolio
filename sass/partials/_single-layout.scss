@@ -1,0 +1,55 @@
+.single-post {
+    grid-column: 1/-1;
+    grid-row: 1/-1;
+
+    article {
+        display: flex;
+        flex-flow: column nowrap;
+        gap: 1rem;
+        h2 {
+            font-size: 2.5rem !important;
+        }
+
+    }
+    
+    .single-post-navigation {
+        display: flex;
+        flex-flow: row nowrap;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+
+        a{
+            text-decoration: none;
+            color: $font-color-dark;
+            transition: all 1s;
+
+
+            &:hover{
+                color: $color-accent;
+                font-style: italic;
+                border-bottom: 1px solid $font-color-dark;
+            }
+        }
+    }
+
+    .entry-content p {
+        padding-bottom: 1rem;
+        border-bottom: 2px solid $font-color-dark;
+    }
+}
+
+@media screen and (min-width: 800px){
+    .single-post {
+        img{
+            margin: auto;
+            width: 50%;
+            height: auto;
+            object-fit: cover;
+        }
+
+        p {
+            padding: 1rem 12%;
+        }
+    }
+}
